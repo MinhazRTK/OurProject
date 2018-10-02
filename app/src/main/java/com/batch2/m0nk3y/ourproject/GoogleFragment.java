@@ -53,7 +53,7 @@ public class GoogleFragment extends Fragment {
     }
 
 
-    public WebView googleView;
+    public WebView webView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,9 +61,9 @@ public class GoogleFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_google, container, false);
 
-        googleView = v.findViewById(R.id.googleHome);
-        googleView.setWebViewClient(new WebViewClient());
-        googleView.loadUrl("http://google.com");
+        webView = v.findViewById(R.id.googleHome);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://www.google.com");
 
         return v;
     }

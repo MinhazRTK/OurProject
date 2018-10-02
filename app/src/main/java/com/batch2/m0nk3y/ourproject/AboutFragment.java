@@ -2,9 +2,14 @@ package com.batch2.m0nk3y.ourproject;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AboutFragment extends Fragment {
@@ -49,10 +54,72 @@ public class AboutFragment extends Fragment {
         }
     }
 
+
+    List<AboutUs> memberList;
+    RecyclerView recyclerView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about, container, false);
+        View v = inflater.inflate(R.layout.fragment_about, container, false);
+
+        recyclerView = v.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        memberList = new ArrayList<>();
+
+        memberList.add(new AboutUs(
+                1,
+                "Minhaz Rahman",
+                "20161012010",
+                R.drawable.minhaz));
+
+        memberList.add(new AboutUs(
+                1,
+                "Fahmi Farzana",
+                "20161012010",
+                R.drawable.fahmi));
+
+        memberList.add(new AboutUs(
+                1,
+                "Mahbuba Ani",
+                "20161012010",
+                R.drawable.oni));
+        memberList.add(new AboutUs(
+                1,
+                "Senjuti Biswas",
+                "20161017010",
+                R.drawable.senjuti));
+
+        memberList.add(new AboutUs(
+                1,
+                "Minhaz Rahman",
+                "20161012010",
+                R.drawable.minhaz));
+
+        memberList.add(new AboutUs(
+                1,
+                "Fahmi Farzana",
+                "20161012010",
+                R.drawable.fahmi));
+
+        memberList.add(new AboutUs(
+                1,
+                "Mahbuba Ani",
+                "20161012010",
+                R.drawable.oni));
+        memberList.add(new AboutUs(
+                1,
+                "Senjuti Biswas",
+                "20161017010",
+                R.drawable.senjuti));
+
+        AdapterForAbout adapter = new AdapterForAbout(getActivity(),memberList);
+        recyclerView.setAdapter(adapter);
+
+
+        return v;
     }
 }
