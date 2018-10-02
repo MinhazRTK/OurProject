@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     ft.commit();
                     return true;
                 case R.id.navigation_browser:
-                    frag = new BrowserFragment();
+                    frag = new AboutFragment();
                     ft.replace(R.id.frame,frag);
                     ft.commit();
                     return true;

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">OurProject</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Our Project</string>
     <string name="title_home">Google</string>
     <string name="title_bookmarks">Bookmarks</string>
-    <string name="title_browser">Browser</string>
+    <string name="title_about">About Us</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
